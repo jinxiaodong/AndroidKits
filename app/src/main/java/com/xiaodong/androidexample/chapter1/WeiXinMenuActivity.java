@@ -63,7 +63,7 @@ public class WeiXinMenuActivity extends JBaseActivity {
                 menuAdapter.setOnItemClickListener(new MenuAdapter.onItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        menuPopView.popDismiss();
+                        menuPopView.dismiss();
                     }
                 });
                 recyclerView.setAdapter(menuAdapter);

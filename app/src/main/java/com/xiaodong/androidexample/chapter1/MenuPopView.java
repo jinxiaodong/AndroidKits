@@ -1,7 +1,6 @@
 package com.xiaodong.androidexample.chapter1;
 
 import android.app.Activity;
-import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -10,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.PopupWindow;
 
+import com.xiaodong.androidexample200.R;
 import com.xiaodong.basetools.utils.DeviceUtil;
 
 /**
@@ -57,12 +57,15 @@ public class MenuPopView extends PopupWindow {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
-                    popDismiss();
+                    dismiss();
                 }
                 return false;
             }
         });
+
         mCallBackView.callBackView(view, this);
+
+        setAnimationStyle(R.style.mypopwindow_anim_style);
 
         showAsDropDown(mTargetView, 0, 0);
     }
@@ -71,13 +74,13 @@ public class MenuPopView extends PopupWindow {
     private FrameLayout parent;
 
     private View createView(final Activity activity, int subview) {
-        View view = LayoutInflater.from(activity).inflate(subview, null,false);
+        View view = LayoutInflater.from(activity).inflate(subview, null, false);
 
         view.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (isShowing()) {
-                    popDismiss();
+                    dismiss();
                 }
                 return true;
             }
@@ -90,9 +93,10 @@ public class MenuPopView extends PopupWindow {
         parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                popDismiss();
+                dismiss();
             }
         });
+
         return parent;
     }
 
@@ -101,14 +105,9 @@ public class MenuPopView extends PopupWindow {
 
     }
 
-    public void popDismiss() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dismiss();
-            }
-        }, 0);
-    }
+
+
+
 
 
     /*设置参照物View*/
@@ -116,12 +115,8 @@ public class MenuPopView extends PopupWindow {
         mTargetView = targetView;
     }
 
-
     public interface CallBackView {
         void callBackView(View view, MenuPopView menuPopView);
     }
-
-
-
 
 }
