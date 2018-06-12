@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidExample200</string>
+    <string name="wx_text_title">微信</string>
 </resources>

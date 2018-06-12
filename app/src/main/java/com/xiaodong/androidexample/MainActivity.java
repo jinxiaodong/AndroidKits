@@ -1,5 +1,6 @@
 package com.xiaodong.androidexample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import com.xiaodong.androidexample200.R;
 import com.xiaodong.basetools.base.JBaseActivity;
 import com.xiaodong.basetools.base.ListAdapter;
 import com.xiaodong.basetools.bean.BeanWraper;
+import com.xiaodong.basetools.utils.SystemBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,7 @@ public class MainActivity extends JBaseActivity {
     RecyclerView mRecycleview;
 
     private ListAdapter mListAdapter;
-    private List<BeanWraper> mList =new ArrayList<>();
+    private List<BeanWraper> mList = new ArrayList<>();
 
     @Override
     protected int getContentLayoutId() {
@@ -46,12 +48,11 @@ public class MainActivity extends JBaseActivity {
     @Override
     protected void initWidget(Bundle onSavedInstance) {
         super.initWidget(onSavedInstance);
-
+        SystemBarUtil.setChenJinTitle(getCommonHeader().getGuider(), mContext);
+        /*禁用页面滑动退出*/
+        setEnableBackLayout(false);
 
         mListAdapter = new ListAdapter(this, mList);
-
-        mRecycleview.setLayoutManager(new LinearLayoutManager(mContext));
-        mRecycleview.setAdapter(mListAdapter);
     }
 
     @Override
@@ -61,9 +62,10 @@ public class MainActivity extends JBaseActivity {
             @Override
             public void onBtnClick(View view, int position) {
                 BeanWraper beanWraper = mList.get(position);
+                Intent intent = null;
                 switch (beanWraper.name) {
                     case "chapter1":
-
+                        intent = new Intent(MainActivity.this, Chapter1Activity.class);
                         break;
                     case "chapter2":
 
@@ -84,6 +86,10 @@ public class MainActivity extends JBaseActivity {
 
                         break;
                 }
+                if(intent ==null) {
+                    return;
+                }
+                startActivity(intent);
             }
         });
 
@@ -93,6 +99,10 @@ public class MainActivity extends JBaseActivity {
     @Override
     protected void initData(Bundle onSavedInstance) {
         super.initData(onSavedInstance);
+
+
+        mRecycleview.setLayoutManager(new LinearLayoutManager(mContext));
+        mRecycleview.setAdapter(mListAdapter);
     }
 
 }

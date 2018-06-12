@@ -8,7 +8,7 @@
         android:id="@+id/title_bar_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/base_main_blue"
+        android:background="@color/base_main_gray"
         android:orientation="vertical">
 
         <TextView

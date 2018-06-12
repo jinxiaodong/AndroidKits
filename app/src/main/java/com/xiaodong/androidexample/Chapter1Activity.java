@@ -12,6 +12,7 @@ import com.xiaodong.androidexample200.R;
 import com.xiaodong.basetools.base.JBaseActivity;
 import com.xiaodong.basetools.base.ListAdapter;
 import com.xiaodong.basetools.bean.BeanWraper;
+import com.xiaodong.basetools.utils.SystemBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,8 @@ public class Chapter1Activity extends JBaseActivity {
     @Override
     protected void initValue(Bundle onSavedInstance) {
         super.initValue(onSavedInstance);
-        setTitle("Android实例200");
+        setTitle("chapter1");
+        showOrHideBackButton(true);
         mList.add(FormatDataUtils.getBeanWraper("微信右上角弹出菜单"));
 
     }
@@ -44,6 +46,7 @@ public class Chapter1Activity extends JBaseActivity {
     @Override
     protected void initWidget(Bundle onSavedInstance) {
         super.initWidget(onSavedInstance);
+        SystemBarUtil.setChenJinTitle(getCommonHeader().getGuider(), mContext);
 
 
         mListAdapter = new ListAdapter(this, mList);

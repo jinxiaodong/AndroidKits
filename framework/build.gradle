@@ -37,4 +37,6 @@ dependencies {
 
     /*jackson*/
     compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.7'
+    //log
+    compile 'com.orhanobut:logger:1.15'
 }
