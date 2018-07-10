@@ -24,6 +24,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -36,4 +42,7 @@ dependencies {
 
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.jakewharton:butterknife:5.1.1'
+
+    compile(name: 'geetest_testbutton_android_v3.5.3', ext: 'aar')
+
 }

@@ -6,6 +6,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.xiaodong.androidexample.chapter1.GeeTestActivity;
+import com.xiaodong.androidexample.chapter1.QQSlideMenuActivity;
+import com.xiaodong.androidexample.chapter1.SlidingDrawerActivity;
+import com.xiaodong.androidexample.chapter1.VerticalViewpagerActivity;
+import com.xiaodong.androidexample.chapter1.VerticalViewpagerCalanderActivity;
 import com.xiaodong.androidexample.chapter1.WeiXinMenuActivity;
 import com.xiaodong.androidexample.utils.FormatDataUtils;
 import com.xiaodong.androidexample200.R;
@@ -20,7 +25,6 @@ import java.util.List;
 import butterknife.InjectView;
 
 public class Chapter1Activity extends JBaseActivity {
-
 
 
     @InjectView(R.id.recycleview)
@@ -40,6 +44,11 @@ public class Chapter1Activity extends JBaseActivity {
         setTitle("chapter1");
         showOrHideBackButton(true);
         mList.add(FormatDataUtils.getBeanWraper("微信右上角弹出菜单"));
+        mList.add(FormatDataUtils.getBeanWraper("抽屉式公告"));
+        mList.add(FormatDataUtils.getBeanWraper("QQ侧滑菜单"));
+        mList.add(FormatDataUtils.getBeanWraper("垂直viewpager"));
+        mList.add(FormatDataUtils.getBeanWraper("垂直viewpager日历"));
+        mList.add(FormatDataUtils.getBeanWraper("极验验证"));
 
     }
 
@@ -64,11 +73,25 @@ public class Chapter1Activity extends JBaseActivity {
                 BeanWraper beanWraper = mList.get(position);
                 Intent intent = null;
                 switch (beanWraper.name) {
-                    case "微信右上角弹出菜单" :
-                         intent = new Intent(Chapter1Activity.this, WeiXinMenuActivity.class);
+                    case "微信右上角弹出菜单":
+                        intent = new Intent(Chapter1Activity.this, WeiXinMenuActivity.class);
+                        break;
+                    case "抽屉式公告":
+                        intent = new Intent(Chapter1Activity.this, SlidingDrawerActivity.class);
+                        break;
+                    case "QQ侧滑菜单":
+                        intent = new Intent(Chapter1Activity.this, QQSlideMenuActivity.class);
+                        break;
+                    case "垂直viewpager":
+                        intent = new Intent(Chapter1Activity.this, VerticalViewpagerActivity.class);
+                        break;
+                    case "垂直viewpager日历":
+                        intent = new Intent(Chapter1Activity.this, VerticalViewpagerCalanderActivity.class);
+                        break;case "极验验证":
+                        intent = new Intent(Chapter1Activity.this, GeeTestActivity.class);
                         break;
                 }
-                if(intent == null) {
+                if (intent == null) {
                     return;
                 }
                 startActivity(intent);
