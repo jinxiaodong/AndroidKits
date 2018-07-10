@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.xiaodong.androidexample.chapter1.AcceptShareActivity;
 import com.xiaodong.androidexample.chapter1.GeeTestActivity;
 import com.xiaodong.androidexample.chapter1.QQSlideMenuActivity;
 import com.xiaodong.androidexample.chapter1.SlidingDrawerActivity;
@@ -49,6 +50,7 @@ public class Chapter1Activity extends JBaseActivity {
         mList.add(FormatDataUtils.getBeanWraper("垂直viewpager"));
         mList.add(FormatDataUtils.getBeanWraper("垂直viewpager日历"));
         mList.add(FormatDataUtils.getBeanWraper("极验验证"));
+        mList.add(FormatDataUtils.getBeanWraper("接受分享"));
 
     }
 
@@ -87,8 +89,12 @@ public class Chapter1Activity extends JBaseActivity {
                         break;
                     case "垂直viewpager日历":
                         intent = new Intent(Chapter1Activity.this, VerticalViewpagerCalanderActivity.class);
-                        break;case "极验验证":
+                        break;
+                    case "极验验证":
                         intent = new Intent(Chapter1Activity.this, GeeTestActivity.class);
+                        break;
+                    case "接受分享":
+                        intent = new Intent(Chapter1Activity.this, AcceptShareActivity.class);
                         break;
                 }
                 if (intent == null) {
