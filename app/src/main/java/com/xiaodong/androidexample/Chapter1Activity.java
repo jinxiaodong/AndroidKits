@@ -9,6 +9,7 @@ import android.view.View;
 import com.xiaodong.androidexample.chapter1.AcceptShareActivity;
 import com.xiaodong.androidexample.chapter1.GeeTestActivity;
 import com.xiaodong.androidexample.chapter1.QQSlideMenuActivity;
+import com.xiaodong.androidexample.chapter1.RotateMenuActivity;
 import com.xiaodong.androidexample.chapter1.SlidingDrawerActivity;
 import com.xiaodong.androidexample.chapter1.VerticalViewpagerActivity;
 import com.xiaodong.androidexample.chapter1.VerticalViewpagerCalanderActivity;
@@ -47,6 +48,7 @@ public class Chapter1Activity extends JBaseActivity {
         mList.add(FormatDataUtils.getBeanWraper("微信右上角弹出菜单"));
         mList.add(FormatDataUtils.getBeanWraper("抽屉式公告"));
         mList.add(FormatDataUtils.getBeanWraper("QQ侧滑菜单"));
+        mList.add(FormatDataUtils.getBeanWraper("收放的旋转菜单"));
         mList.add(FormatDataUtils.getBeanWraper("垂直viewpager"));
         mList.add(FormatDataUtils.getBeanWraper("垂直viewpager日历"));
         mList.add(FormatDataUtils.getBeanWraper("极验验证"));
@@ -95,6 +97,9 @@ public class Chapter1Activity extends JBaseActivity {
                         break;
                     case "接受分享":
                         intent = new Intent(Chapter1Activity.this, AcceptShareActivity.class);
+                        break;
+                    case "收放的旋转菜单":
+                        intent = new Intent(Chapter1Activity.this, RotateMenuActivity.class);
                         break;
                 }
                 if (intent == null) {

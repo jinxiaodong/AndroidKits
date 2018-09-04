@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--收放的旋转按钮-->
+    <declare-styleable name="ArcMenu">
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+    <!--收放的旋转按钮-->
+
+
+</resources>

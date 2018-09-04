@@ -1,4 +1,4 @@
-package com.xiaodong.androidexample;
+package com.xiaodong.androidexample.customanimal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.xiaodong.androidexample.customanimal.CustomAnimalActivity;
+import com.xiaodong.androidexample.customanimal.animal.InterpolatorActivity;
 import com.xiaodong.androidexample.utils.FormatDataUtils;
 import com.xiaodong.androidexample200.R;
 import com.xiaodong.basetools.base.JBaseActivity;
@@ -19,8 +19,7 @@ import java.util.List;
 
 import butterknife.InjectView;
 
-public class MainActivity extends JBaseActivity {
-
+public class AnimalActivity extends JBaseActivity {
 
     @InjectView(R.id.recycleview)
     RecyclerView mRecycleview;
@@ -30,31 +29,28 @@ public class MainActivity extends JBaseActivity {
 
     @Override
     protected int getContentLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_animal;
     }
 
     @Override
     protected void initValue(Bundle onSavedInstance) {
         super.initValue(onSavedInstance);
-        setTitle("Android实例200");
-        mList.add(FormatDataUtils.getBeanWraper("chapter1"));
-        mList.add(FormatDataUtils.getBeanWraper("chapter2"));
-        mList.add(FormatDataUtils.getBeanWraper("chapter3"));
-        mList.add(FormatDataUtils.getBeanWraper("chapter4"));
-        mList.add(FormatDataUtils.getBeanWraper("chapter5"));
-        mList.add(FormatDataUtils.getBeanWraper("chapter6"));
-        mList.add(FormatDataUtils.getBeanWraper("自定义控件三部曲"));
+
+        mList.add(FormatDataUtils.getBeanWraper("Interpolator插值器"));
 
     }
 
     @Override
     protected void initWidget(Bundle onSavedInstance) {
         super.initWidget(onSavedInstance);
+        setTitle("自定义控件三部曲之动画");
+        showOrHideBackButton(true);
         SystemBarUtil.setChenJinTitle(getCommonHeader().getGuider(), mContext);
-        /*禁用页面滑动退出*/
-        setEnableBackLayout(false);
 
         mListAdapter = new ListAdapter(this, mList);
+
+        mRecycleview.setLayoutManager(new LinearLayoutManager(mContext));
+        mRecycleview.setAdapter(mListAdapter);
     }
 
     @Override
@@ -66,29 +62,10 @@ public class MainActivity extends JBaseActivity {
                 BeanWraper beanWraper = mList.get(position);
                 Intent intent = null;
                 switch (beanWraper.name) {
-                    case "chapter1":
-                        intent = new Intent(MainActivity.this, Chapter1Activity.class);
+                    case "Interpolator插值器":
+                        intent = new Intent(AnimalActivity.this, InterpolatorActivity.class);
                         break;
-                    case "chapter2":
 
-                        break;
-                    case "chapter3":
-                        break;
-                    case "chapter4":
-
-                        break;
-                    case "chapter5":
-
-                        break;
-                    case "chapter6":
-
-                        break;
-                    case "chapter7":
-
-                        break;
-                    case "自定义控件三部曲":
-                        intent = new Intent(MainActivity.this, CustomAnimalActivity.class);
-                        break;
                 }
                 if (intent == null) {
                     return;
@@ -96,17 +73,11 @@ public class MainActivity extends JBaseActivity {
                 startActivity(intent);
             }
         });
-
     }
 
 
     @Override
     protected void initData(Bundle onSavedInstance) {
         super.initData(onSavedInstance);
-
-
-        mRecycleview.setLayoutManager(new LinearLayoutManager(mContext));
-        mRecycleview.setAdapter(mListAdapter);
     }
-
 }

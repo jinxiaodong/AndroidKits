@@ -1,4 +1,4 @@
-package com.xiaodong.androidexample.chapter1;
+package com.xiaodong.androidexample.chapter1.widget;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

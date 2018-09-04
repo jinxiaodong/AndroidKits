@@ -3,7 +3,7 @@
 
     <color name="base_main_gray">#303030</color>//页面主色
     <color name="base_main_gray_transparent">#bb303030</color>//页面主色
-    <color name="base_main_white">#ffffff</color>//蓝色背景文字
+    <color name="base_main_white">#ffffff</color>
     <color name="base_color_gray_e4e4e4">#E4E4E4</color>//默认线框色，未点亮按钮背景  线框灰
     <color name="base_color_gray_f9f9f9">#f9f9f9</color>
     <color name="base_color_gray_444444">#444444</color>

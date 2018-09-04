@@ -7,7 +7,7 @@
     tools:context="com.xiaodong.androidexample.chapter1.QQSlideMenuActivity">
 
 
-    <com.xiaodong.androidexample.chapter1.QQSlideMenu
+    <com.xiaodong.androidexample.chapter1.widget.QQSlideMenu
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -37,5 +37,5 @@
 
         </LinearLayout>
 
-    </com.xiaodong.androidexample.chapter1.QQSlideMenu>
+    </com.xiaodong.androidexample.chapter1.widget.QQSlideMenu>
 </android.support.constraint.ConstraintLayout>

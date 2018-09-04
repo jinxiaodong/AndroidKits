@@ -8,6 +8,7 @@ import com.geetest.sdk.Bind.GT3GeetestBindListener;
 import com.geetest.sdk.Bind.GT3GeetestUtilsBind;
 import com.xiaodong.androidexample200.R;
 import com.xiaodong.basetools.base.JBaseActivity;
+import com.xiaodong.basetools.utils.SystemBarUtil;
 import com.xiaodong.basetools.view.JButton;
 
 import org.json.JSONException;
@@ -36,6 +37,9 @@ public class GeeTestActivity extends JBaseActivity {
     @Override
     protected void initWidget(Bundle onSavedInstance) {
         super.initWidget(onSavedInstance);
+
+        SystemBarUtil.setChenJinTitle(getCommonHeader().getGuider(), mContext);
+        setTitle("极验验证");
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

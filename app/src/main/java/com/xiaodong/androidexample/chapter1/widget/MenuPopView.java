@@ -1,4 +1,4 @@
-package com.xiaodong.androidexample.chapter1;
+package com.xiaodong.androidexample.chapter1.widget;
 
 import android.app.Activity;
 import android.view.KeyEvent;

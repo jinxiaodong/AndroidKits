@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.xiaodong.androidexample200.R;
 import com.xiaodong.basetools.base.JBaseActivity;
+import com.xiaodong.basetools.utils.SystemBarUtil;
 import com.xiaodong.basetools.view.calendarview.Calendar;
 import com.xiaodong.basetools.view.calendarview.CalendarLayout;
 import com.xiaodong.basetools.view.calendarview.CalendarView;
@@ -24,6 +25,9 @@ public class VerticalViewpagerCalanderActivity extends JBaseActivity implements 
     @Override
     protected void initWidget(Bundle onSavedInstance) {
         super.initWidget(onSavedInstance);
+
+        SystemBarUtil.setChenJinTitle(getCommonHeader().getGuider(), mContext);
+        setTitle("垂直Viewpager日历");
         calendarLayout =(CalendarLayout) findViewById(R.id.calendarLayout);
         calendarview =(CalendarView) findViewById(R.id.calendarview);
         calendarview.setFixMode();

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xiaodong.androidexample.customanimal.CustomAnimalActivity">
+
+    <com.xiaodong.basetools.view.JButton
+        android:id="@+id/button_animal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:text="自定义控件三部曲之动画篇"
+        android:textColor="@color/base_main_white"
+        android:textSize="@dimen/font_16sp"
+        app:mode="0"/>
+
+    <com.xiaodong.basetools.view.JButton
+        android:id="@+id/button_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:text="自定义控件三部曲之绘图篇"
+        android:textColor="@color/base_main_white"
+        android:textSize="@dimen/font_16sp"
+        app:mode="0"/>
+
+    <com.xiaodong.basetools.view.JButton
+        android:id="@+id/button_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:text="自定义控件三部曲之视图篇"
+        android:textColor="@color/base_main_white"
+        android:textSize="@dimen/font_16sp"
+        app:mode="0"/>
+</LinearLayout>

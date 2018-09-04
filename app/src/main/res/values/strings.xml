@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">AndroidExample200</string>
     <string name="wx_text_title">微信</string>
+
+    <!--收放的旋转菜单-->
+    <string name="text_btn1">子按钮1</string>
+    <string name="text_btn2">子按钮2</string>
+    <string name="text_btn3">子按钮3</string>
+    <string name="text_btn4">子按钮4</string>
+    <string name="text_btn5">子按钮5</string>
+    <!--收放的旋转菜单-->
+
+
 </resources>
