@@ -1,9 +1,10 @@
 package com.xiaodong.basetools.base.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by lenovo on 2016/7/21.

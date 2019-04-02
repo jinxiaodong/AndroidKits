@@ -1,8 +1,6 @@
 package com.xiaodong.basetools.view.calendarview;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -13,6 +11,9 @@ import com.xiaodong.basetools.R;
 
 import java.lang.reflect.Constructor;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * Created by xiaodong.jin on 2018/6/21.

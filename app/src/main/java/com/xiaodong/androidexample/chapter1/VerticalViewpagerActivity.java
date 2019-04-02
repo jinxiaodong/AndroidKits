@@ -2,10 +2,6 @@ package com.xiaodong.androidexample.chapter1;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +11,11 @@ import com.xiaodong.androidexample200.R;
 import com.xiaodong.basetools.view.VerticalViewPager;
 
 import java.util.Locale;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 public class VerticalViewpagerActivity extends AppCompatActivity {
 

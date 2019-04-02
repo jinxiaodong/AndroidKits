@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+
+            android:id="@+id/home_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.xiaodong.basetools.view.MyCoordinatorLayout
+                android:id="@+id/coordinatorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appbarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:clipChildren="false"
+                    app:elevation="0dp"
+                    app:layout_behavior="com.xiaodong.basetools.view.behavior.FixBounceV26Behavior">
+
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapsing_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        app:contentScrim="@color/transparent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:scrimAnimationDuration="0"
+                        app:toolbarId="@+id/toolbar">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/home_recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:overScrollMode="never"/>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/base_color_gray_333333"
+                            app:contentInsetStart="0dp"
+                            app:layout_collapseMode="pin">
+
+                            <include layout="@layout/fragment_home_header"/>
+                        </androidx.appcompat.widget.Toolbar>
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <net.lucode.hackware.magicindicator.MagicIndicator
+                            android:id="@+id/magic_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_gravity="center_horizontal"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:overScrollMode="never"
+                            android:paddingLeft="@dimen/dimen_5dp"
+                            android:paddingRight="@dimen/dimen_5dp"/>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                </androidx.viewpager.widget.ViewPager>
+            </com.xiaodong.basetools.view.MyCoordinatorLayout>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

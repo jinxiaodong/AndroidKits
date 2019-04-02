@@ -2,7 +2,6 @@ package com.xiaodong.basetools.base.adapter;
 
 import android.content.Context;
 import android.os.Handler;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,8 @@ import com.xiaodong.basetools.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by lenovo on 2016/7/21.

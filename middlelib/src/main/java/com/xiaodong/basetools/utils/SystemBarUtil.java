@@ -9,10 +9,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.FloatRange;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -26,6 +22,11 @@ import com.xiaodong.basetools.R;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.regex.Pattern;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.FloatRange;
+import androidx.core.view.ViewCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 /**
  * 状态栏工具类

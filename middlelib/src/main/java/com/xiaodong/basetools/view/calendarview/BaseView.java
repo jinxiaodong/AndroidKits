@@ -19,12 +19,13 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 /**
  * 基本的日历View，派生出MonthView 和 WeekView

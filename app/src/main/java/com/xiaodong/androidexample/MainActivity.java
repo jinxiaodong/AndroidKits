@@ -2,8 +2,6 @@ package com.xiaodong.androidexample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.xiaodong.androidexample.customanimal.CustomAnimalActivity;
@@ -17,6 +15,8 @@ import com.xiaodong.basetools.utils.SystemBarUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import butterknife.InjectView;
 
 public class MainActivity extends JBaseActivity {
@@ -44,6 +44,7 @@ public class MainActivity extends JBaseActivity {
         mList.add(FormatDataUtils.getBeanWraper("chapter5"));
         mList.add(FormatDataUtils.getBeanWraper("chapter6"));
         mList.add(FormatDataUtils.getBeanWraper("自定义控件三部曲"));
+        mList.add(FormatDataUtils.getBeanWraper("首页复杂布局"));
 
     }
 
@@ -88,6 +89,9 @@ public class MainActivity extends JBaseActivity {
                         break;
                     case "自定义控件三部曲":
                         intent = new Intent(MainActivity.this, CustomAnimalActivity.class);
+                        break;
+                    case "首页复杂布局":
+                        intent = new Intent(MainActivity.this, HomeLayoutActivity.class);
                         break;
                 }
                 if (intent == null) {

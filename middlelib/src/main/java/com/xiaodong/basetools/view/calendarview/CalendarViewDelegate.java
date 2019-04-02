@@ -3,7 +3,6 @@ package com.xiaodong.basetools.view.calendarview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 
@@ -11,6 +10,8 @@ import com.xiaodong.basetools.R;
 
 import java.util.Date;
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 
 /**

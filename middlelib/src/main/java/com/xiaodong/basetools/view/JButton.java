@@ -2,11 +2,13 @@ package com.xiaodong.basetools.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 
 import com.xiaodong.basetools.R;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 
 /**
  * Created by xiaodong.jin on 2018/5/23.
@@ -17,7 +19,7 @@ import com.xiaodong.basetools.R;
  *      3.表单内按钮：33dp
  */
 
-public class JButton extends android.support.v7.widget.AppCompatButton {
+public class JButton extends AppCompatButton {
 
     /**
      * mode:按钮的样式

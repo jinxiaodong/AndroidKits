@@ -1,16 +1,17 @@
 package com.xiaodong.basetools.base;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.xiaodong.basetools.view.JButton;
 import com.xiaodong.basetools.R;
 import com.xiaodong.basetools.bean.BeanWraper;
+import com.xiaodong.basetools.view.JButton;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by xiaodong.jin on 2018/6/11.

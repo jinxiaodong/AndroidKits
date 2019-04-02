@@ -1,8 +1,6 @@
 package com.xiaodong.androidexample.chapter1;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -17,6 +15,8 @@ import com.xiaodong.basetools.utils.SystemBarUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import butterknife.InjectView;
 
 public class WeiXinMenuActivity extends JBaseActivity {

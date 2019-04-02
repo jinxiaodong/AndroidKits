@@ -2,7 +2,6 @@ package com.project.xiaodong.fflibrary.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,8 @@ import com.project.xiaodong.fflibrary.task.ITask;
 import com.project.xiaodong.fflibrary.task.IUIController;
 import com.project.xiaodong.fflibrary.task.MSG;
 import com.project.xiaodong.fflibrary.task.TaskManager;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * Created by xiaodong.jin on 2018/2/6.
@@ -197,4 +198,25 @@ public abstract class BaseFragment extends Fragment implements IUIController {
     /*******************************************************************************
      *	Internal Class,Interface
      *******************************************************************************/
+
+
+    /**
+     * 根据id查找view
+     *
+     * @param res
+     * @return
+     */
+    public View findViewById(int res) {
+        try {
+            if (mRootView != null) {
+                View view = mRootView.findViewById(res);
+                return view;
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

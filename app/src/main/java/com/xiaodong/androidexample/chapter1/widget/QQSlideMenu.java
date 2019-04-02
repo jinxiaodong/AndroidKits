@@ -11,13 +11,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntDef;
-import android.support.annotation.Nullable;
-import android.support.v4.view.AbsSavedState;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -28,6 +21,14 @@ import android.view.WindowInsets;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.FloatRange;
+import androidx.annotation.IntDef;
+import androidx.annotation.Nullable;
+import androidx.core.view.ViewCompat;
+import androidx.customview.view.AbsSavedState;
+import androidx.customview.widget.ViewDragHelper;
 
 /**
  * Created by xiaodong.jin on 2018/6/12.

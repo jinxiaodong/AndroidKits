@@ -1,7 +1,6 @@
 package com.project.xiaodong.fflibrary.base;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,8 @@ import com.project.xiaodong.fflibrary.task.ITask;
 import com.project.xiaodong.fflibrary.task.IUIController;
 import com.project.xiaodong.fflibrary.task.MSG;
 import com.project.xiaodong.fflibrary.task.TaskManager;
+
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * Created by xiaodong.jin on 2018/2/6.

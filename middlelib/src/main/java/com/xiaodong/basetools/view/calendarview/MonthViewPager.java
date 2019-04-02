@@ -2,8 +2,6 @@ package com.xiaodong.basetools.view.calendarview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -13,6 +11,9 @@ import android.view.ViewGroup;
 import com.xiaodong.basetools.view.VerticalViewPager;
 
 import java.lang.reflect.Constructor;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 
 /**
