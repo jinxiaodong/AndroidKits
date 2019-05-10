@@ -1,1 +1,1 @@
-include ':app', ':middlelib', ':framework', ':smooth-app-bar-layout'
+include ':app', ':middlelib', ':framework'

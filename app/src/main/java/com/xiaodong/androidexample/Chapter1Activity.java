@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.xiaodong.androidexample.chapter1.AcceptShareActivity;
 import com.xiaodong.androidexample.chapter1.DialogActivity;
+import com.xiaodong.androidexample.chapter1.EditTextActivity;
 import com.xiaodong.androidexample.chapter1.GeeTestActivity;
 import com.xiaodong.androidexample.chapter1.QQSlideMenuActivity;
 import com.xiaodong.androidexample.chapter1.RotateMenuActivity;
@@ -55,6 +56,7 @@ public class Chapter1Activity extends JBaseActivity {
         mList.add(FormatDataUtils.getBeanWraper("极验验证"));
         mList.add(FormatDataUtils.getBeanWraper("接受分享"));
         mList.add(FormatDataUtils.getBeanWraper("提示Dialog"));
+        mList.add(FormatDataUtils.getBeanWraper("EditText"));
 
     }
 
@@ -105,6 +107,9 @@ public class Chapter1Activity extends JBaseActivity {
                         break;
                     case "提示Dialog":
                         intent = new Intent(Chapter1Activity.this, DialogActivity.class);
+                        break;
+                    case "EditText":
+                        intent = new Intent(Chapter1Activity.this, EditTextActivity.class);
                         break;
                 }
                 if (intent == null) {

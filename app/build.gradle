@@ -39,7 +39,7 @@ dependencies {
 
     implementation project(':middlelib')
     implementation project(':framework')
-    implementation project(':smooth-app-bar-layout')
+//    implementation project(':smooth-app-bar-layout')
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
     implementation 'com.jakewharton:butterknife:5.1.1'
@@ -47,6 +47,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:compiler:4.1.1'
 
 
-    compile(name: 'geetest_testbutton_android_v3.5.3', ext: 'aar')
+    implementation(name: 'geetest_testbutton_android_v3.5.3', ext: 'aar')
 
 }

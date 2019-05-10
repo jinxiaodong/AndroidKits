@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_et_content"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp">
+
+    <!--11sp -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="主题"
+        android:textColor="#00A0E9"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="2dp"
+        android:background="@null"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/base_color_gray_333333"
+        android:textColorHint="#383838"
+        android:textCursorDrawable="@drawable/edit_cursor"
+        android:textSize="17sp" />
+
+</LinearLayout>
