@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.xiaodong.androidexample.chapter1.GeeTestActivity">
+    tools:context="com.common.androidexample.chapter1.GeeTestActivity">
 
-    <com.xiaodong.basetools.view.JButton
+    <com.common.library.view.widgets.JButton
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="20dp"
         android:text="测试"
-        android:textColor="@color/base_main_white"/>
+        android:textColor="@color/lib_white"/>
 </LinearLayout>

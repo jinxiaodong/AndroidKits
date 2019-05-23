@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xiaodong.androidexample200">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.common.androidexample200">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -11,29 +12,37 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name="com.common.androidexample.JApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.xiaodong.androidexample.chapter1.EditTextActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.HomeLayoutActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.MainActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.common.androidexample.chapter1.SoftKeyBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity android:name="com.common.androidexample.chapter1.EditTextActivity" />
+        <activity android:name="com.common.androidexample.HomeLayoutActivity" />
+        <activity android:name="com.common.androidexample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.WeiXinMenuActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.Chapter1Activity"></activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.SlidingDrawerActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.QQSlideMenuActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.VerticalViewpagerActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.VerticalViewpagerCalanderActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.GeeTestActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.AcceptShareActivity">
+        <activity android:name="com.common.androidexample.chapter1.WeiXinMenuActivity" />
+        <activity android:name="com.common.androidexample.Chapter1Activity" />
+        <activity android:name="com.common.androidexample.chapter1.SlidingDrawerActivity" />
+        <activity android:name="com.common.androidexample.chapter1.QQSlideMenuActivity" />
+        <activity android:name="com.common.androidexample.chapter1.VerticalViewpagerActivity" />
+        <activity android:name="com.common.androidexample.chapter1.VerticalViewpagerCalanderActivity" />
+        <activity android:name="com.common.androidexample.chapter1.GeeTestActivity" />
+        <activity android:name="com.common.androidexample.chapter1.AcceptShareActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -44,11 +53,11 @@
                 <data android:mimeType="text/*" />
             </intent-filter>
         </activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.RotateMenuActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.customanimal.CustomAnimalActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.customanimal.AnimalActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.customanimal.animal.InterpolatorActivity"></activity>
-        <activity android:name="com.xiaodong.androidexample.chapter1.DialogActivity"></activity>
+        <activity android:name="com.common.androidexample.chapter1.RotateMenuActivity" />
+        <activity android:name="com.common.androidexample.customanimal.CustomAnimalActivity" />
+        <activity android:name="com.common.androidexample.customanimal.AnimalActivity" />
+        <activity android:name="com.common.androidexample.customanimal.animal.InterpolatorActivity" />
+        <activity android:name="com.common.androidexample.chapter1.DialogActivity" />
     </application>
 
 </manifest>

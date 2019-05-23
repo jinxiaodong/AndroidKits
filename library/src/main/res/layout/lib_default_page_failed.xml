@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:gravity="center_horizontal"
+              android:background="@color/lib_main_white"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="167dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="96dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="加载失败"
+        android:textColor="@color/lib_color_gray_999999" />
+
+    <com.common.library.view.widgets.JButton
+        android:id="@+id/bt_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingRight="@dimen/dimen_10dp"
+        android:layout_marginTop="20dp"
+        app:mode="1"
+        android:text="刷新"
+        android:textSize="12sp" />
+</LinearLayout>

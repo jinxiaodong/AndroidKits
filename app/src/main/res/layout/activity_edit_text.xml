@@ -4,23 +4,23 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <com.xiaodong.androidexample.chapter1.widget.CustomerEditText
+    <com.common.androidexample.chapter1.widget.CustomerEditText
         android:id="@+id/customeredittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </com.xiaodong.androidexample.chapter1.widget.CustomerEditText>
+    </com.common.androidexample.chapter1.widget.CustomerEditText>
 
-    <com.xiaodong.androidexample.chapter1.widget.CustomerEditText
+    <com.common.androidexample.chapter1.widget.CustomerEditText
         android:id="@+id/customeredittext2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </com.xiaodong.androidexample.chapter1.widget.CustomerEditText>
-    <com.xiaodong.androidexample.chapter1.widget.CustomerEditText
+    </com.common.androidexample.chapter1.widget.CustomerEditText>
+    <com.common.androidexample.chapter1.widget.CustomerEditText
         android:id="@+id/customeredittext3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </com.xiaodong.androidexample.chapter1.widget.CustomerEditText>
+    </com.common.androidexample.chapter1.widget.CustomerEditText>
 </LinearLayout>

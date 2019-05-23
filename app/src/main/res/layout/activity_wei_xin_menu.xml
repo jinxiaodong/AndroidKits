@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/base_main_white"
+    android:background="@color/lib_main_white"
     android:orientation="vertical"
-    tools:context="com.xiaodong.androidexample.chapter1.WeiXinMenuActivity">
+    tools:context="com.common.androidexample.chapter1.WeiXinMenuActivity">
 
     <View
-        android:background="@color/base_main_gray"
+        android:background="@color/lib_main_color"
         android:id="@+id/status_bar"
         android:layout_width="match_parent"
         android:layout_height="0dp"></View>
 
     <RelativeLayout
         android:id="@+id/rl_title"
-        android:background="@color/base_main_gray"
+        android:background="@color/lib_main_color"
         android:paddingLeft="@dimen/dimen_15dp"
         android:paddingRight="@dimen/dimen_15dp"
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wx_text_title"
-            android:textColor="@color/base_main_white"
+            android:textColor="@color/lib_main_white"
             android:textSize="18sp"
             />
         <!--菜单按钮-->

@@ -1,1 +1,5 @@
-include ':app', ':middlelib', ':framework'
+include ':app',
+//        ':middlelib',
+//        ':framework',
+        ':library'
+

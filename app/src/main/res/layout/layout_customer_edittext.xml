@@ -28,7 +28,7 @@
         android:background="@null"
         android:singleLine="true"
         android:text=""
-        android:textColor="@color/base_color_gray_333333"
+        android:textColor="@color/lib_color_gray_333333"
         android:textColorHint="#383838"
         android:textCursorDrawable="@drawable/edit_cursor"
         android:textSize="17sp" />

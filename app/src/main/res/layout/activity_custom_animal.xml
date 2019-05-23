@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.xiaodong.androidexample.customanimal.CustomAnimalActivity">
+    tools:context="com.common.androidexample.customanimal.CustomAnimalActivity">
 
-    <com.xiaodong.basetools.view.JButton
+    <com.common.library.view.widgets.JButton
         android:id="@+id/button_animal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,11 +19,11 @@
         android:paddingBottom="@dimen/dimen_10dp"
         android:paddingTop="@dimen/dimen_10dp"
         android:text="自定义控件三部曲之动画篇"
-        android:textColor="@color/base_main_white"
+        android:textColor="@color/lib_white"
         android:textSize="@dimen/font_16sp"
         app:mode="0"/>
 
-    <com.xiaodong.basetools.view.JButton
+    <com.common.library.view.widgets.JButton
         android:id="@+id/button_canvas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,11 +34,11 @@
         android:paddingBottom="@dimen/dimen_10dp"
         android:paddingTop="@dimen/dimen_10dp"
         android:text="自定义控件三部曲之绘图篇"
-        android:textColor="@color/base_main_white"
+        android:textColor="@color/lib_white"
         android:textSize="@dimen/font_16sp"
         app:mode="0"/>
 
-    <com.xiaodong.basetools.view.JButton
+    <com.common.library.view.widgets.JButton
         android:id="@+id/button_view"
 
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
         android:paddingBottom="@dimen/dimen_10dp"
         android:paddingTop="@dimen/dimen_10dp"
         android:text="自定义控件三部曲之视图篇"
-        android:textColor="@color/base_main_white"
+        android:textColor="@color/lib_white"
         android:textSize="@dimen/font_16sp"
         app:mode="0"/>
 </LinearLayout>

@@ -12,7 +12,7 @@
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:background="@color/base_color_gray_393a3f"
+        android:background="@color/lib_color_gray_393a3f"
         android:drawableLeft="@mipmap/icon_group"
         android:drawablePadding="10dip"
         android:gravity="left|center"

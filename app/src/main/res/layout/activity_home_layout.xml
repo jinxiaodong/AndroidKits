@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.xiaodong.basetools.view.MyCoordinatorLayout
+            <com.common.library.view.MyCoordinatorLayout
                 android:id="@+id/coordinatorLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -28,7 +28,7 @@
                     android:background="@color/transparent"
                     android:clipChildren="false"
                     app:elevation="0dp"
-                    app:layout_behavior="com.xiaodong.basetools.view.behavior.FixBounceV26Behavior">
+                    app:layout_behavior="com.common.androidexample.view.behavior.FixBounceV26Behavior">
 
 
                     <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -59,7 +59,7 @@
                             android:id="@+id/toolbar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/base_color_gray_333333"
+                            android:background="@color/lib_color_gray_333333"
                             app:contentInsetStart="0dp"
                             app:layout_collapseMode="pin">
 
@@ -100,7 +100,7 @@
                     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
                 </androidx.viewpager.widget.ViewPager>
-            </com.xiaodong.basetools.view.MyCoordinatorLayout>
+            </com.common.library.view.MyCoordinatorLayout>
 
         </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 

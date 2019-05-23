@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.xiaodong.androidexample.chapter1.VerticalViewpagerCalanderActivity">
+    tools:context="com.common.androidexample.chapter1.VerticalViewpagerCalanderActivity">
 
 
-    <com.xiaodong.basetools.view.calendarview.CalendarLayout
+    <com.common.androidexample.view.calendarview.CalendarLayout
         android:id="@+id/calendarLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
 
-        <com.xiaodong.basetools.view.calendarview.CalendarView
+        <com.common.androidexample.view.calendarview.CalendarView
             android:id="@+id/calendarview"
             android:background="#fff"
             android:layout_width="match_parent"
@@ -41,8 +41,8 @@
 
 
 
-        </com.xiaodong.basetools.view.calendarview.CalendarView>
-    </com.xiaodong.basetools.view.calendarview.CalendarLayout>
+        </com.common.androidexample.view.calendarview.CalendarView>
+    </com.common.androidexample.view.calendarview.CalendarLayout>
 
 
 </LinearLayout>
