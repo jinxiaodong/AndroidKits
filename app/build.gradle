@@ -1,50 +1,82 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion app.compileSdkVersion
+    buildToolsVersion app.buildToolsVersion
     defaultConfig {
-        applicationId "com.xiaodong.androidexample"
-        minSdkVersion 19
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        multiDexEnabled true
+        applicationId app.applicationId
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
     }
-
+    compileOptions {
+        sourceCompatibility app.sourceCompatibility
+        targetCompatibility app.targetCompatibility
+    }
     packagingOptions {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/ASL2.0'
     }
 
+
+    signingConfigs {
+        release {
+            Properties properties = new Properties()
+            InputStream inputStream = rootProject.file('local.properties').newDataInputStream()
+            properties.load(inputStream)
+
+            keyAlias properties.getProperty('RELEASE_KEY_ALIAS')
+            keyPassword properties.getProperty('RELEASE_KEY_PASSWORD')
+            storeFile file(properties.getProperty('RELEASE_STOREFILE'))
+            storePassword properties.getProperty('RELEASE_STOREPASSWORD')
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
         }
     }
-
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def date = releaseTime()
+            def applicationId = variant.applicationId
+            def versionName = defaultConfig.versionName
+            def versionCode = defaultConfig.versionCode
+            def debugType = variant.buildType.name
+            outputFileName = "${debugType}_${versionName}_${date}_${applicationId}.apk"
+        }
+    }
     repositories {
         flatDir {
             dirs 'libs'
         }
     }
-
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-
     implementation project(':library')
     implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
-
     implementation(name: 'geetest_testbutton_android_v3.5.3', ext: 'aar')
+}
 
+
+def releaseTime() {
+    return new Date().format("MMdd_hhmm", TimeZone.getTimeZone("Asia/Shanghai"))
 }

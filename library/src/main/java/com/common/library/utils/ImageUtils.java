@@ -134,7 +134,7 @@ public class ImageUtils {
      * @return drawable
      */
     public static Drawable bitmap2Drawable(final Bitmap bitmap) {
-        return bitmap == null ? null : new BitmapDrawable(Utils.getApp().getResources(), bitmap);
+        return bitmap == null ? null : new BitmapDrawable(LifecycleUtils.getApp().getResources(), bitmap);
     }
 
     /**
@@ -315,7 +315,7 @@ public class ImageUtils {
      * @return bitmap
      */
     public static Bitmap getBitmap(@DrawableRes final int resId) {
-        Drawable drawable = ContextCompat.getDrawable(Utils.getApp(), resId);
+        Drawable drawable = ContextCompat.getDrawable(LifecycleUtils.getApp(), resId);
         Canvas canvas = new Canvas();
         Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         canvas.setBitmap(bitmap);
@@ -335,7 +335,7 @@ public class ImageUtils {
      */
     public static Bitmap getBitmap(@DrawableRes final int resId, final int maxWidth, final int maxHeight) {
         BitmapFactory.Options options = new BitmapFactory.Options();
-        final Resources resources = Utils.getApp().getResources();
+        final Resources resources = LifecycleUtils.getApp().getResources();
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeResource(resources, resId, options);
         options.inSampleSize = calculateInSampleSize(options, maxWidth, maxHeight);
@@ -1174,7 +1174,7 @@ public class ImageUtils {
         RenderScript rs = null;
         Bitmap ret = recycle ? src : src.copy(src.getConfig(), true);
         try {
-            rs = RenderScript.create(Utils.getApp());
+            rs = RenderScript.create(LifecycleUtils.getApp());
             rs.setMessageHandler(new RenderScript.RSMessageHandler());
             Allocation
                     input = Allocation.createFromBitmap(rs, ret, Allocation.MipmapControl.MIPMAP_NONE, Allocation

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.common.androidexample.chapter1.GeeTestActivity">
+    tools:context="com.androidkits.chapter1.GeeTestActivity">
 
     <com.common.library.view.widgets.JButton
         android:id="@+id/button"

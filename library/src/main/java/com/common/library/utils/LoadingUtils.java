@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.common.library.R;
-import com.common.library.commons.constants.DeviceInfo;
+import com.common.library.commons.device.DeviceInfo;
 
 /**
  * Created by xiaodong.jin on 2018/11/15.

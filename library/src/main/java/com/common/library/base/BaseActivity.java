@@ -122,7 +122,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 //            rootDecodeView.addView(layout);
         }
         mContext = this;
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initValue(savedInstanceState);
         initWidget(savedInstanceState);
         initListener(savedInstanceState);

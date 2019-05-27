@@ -13,13 +13,13 @@
         android:visibility="visible">
 
 
-        <com.common.androidexample.view.calendarview.MonthViewPager
+        <com.androidkits.view.calendarview.MonthViewPager
             android:id="@+id/vp_calendar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="41dp">
 
-        </com.common.androidexample.view.calendarview.MonthViewPager>
+        </com.androidkits.view.calendarview.MonthViewPager>
 
         <View
             android:id="@+id/line"

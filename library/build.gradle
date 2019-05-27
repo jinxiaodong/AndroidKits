@@ -53,8 +53,11 @@ dependencies {
     api thirdDependencies.eventbus
     api thirdDependencies.logger
     api thirdDependencies.glide
-    api thirdDependencies.glide_compiler
+    annotationProcessor thirdDependencies.glide_compiler
     api thirdDependencies.butterknife
+    annotationProcessor thirdDependencies.butterknife_compiler
     api thirdDependencies.smartrefreshlayout
+    api thirdDependencies.arouter
+    annotationProcessor thirdDependencies.arouter_compiler
 
 }

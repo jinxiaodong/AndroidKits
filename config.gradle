@@ -18,20 +18,22 @@ ext {
      */
     thirdDependencies = [
 
-            rxjava            : "io.reactivex.rxjava2:rxjava:2.1.10",
-            rxandroid         : "io.reactivex.rxjava2:rxandroid:2.0.2",
-            okhttp            : "com.squareup.okhttp3:okhttp:3.10.0",
-            retrofit          : "com.squareup.retrofit2:retrofit:2.4.0",
-            gson              : "com.google.code.gson:gson:2.8.1",
-            gsonConverter     : "com.squareup.retrofit2:converter-gson:2.4.0",
-            rxjavaAdapter     : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
-            eventbus          : "org.greenrobot:eventbus:3.1.1",
-            logger            : "com.orhanobut:logger:2.1.1",
-            glide             : "com.github.bumptech.glide:glide:4.1.1",
-            glide_compiler    : "com.github.bumptech.glide:compiler:4.1.1",
-            butterknife                    : "com.jakewharton:butterknife:5.1.1",
-            smartrefreshlayout: "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14",
-
+            rxjava              : "io.reactivex.rxjava2:rxjava:2.1.10",
+            rxandroid           : "io.reactivex.rxjava2:rxandroid:2.0.2",
+            okhttp              : "com.squareup.okhttp3:okhttp:3.10.0",
+            retrofit            : "com.squareup.retrofit2:retrofit:2.4.0",
+            gson                : "com.google.code.gson:gson:2.8.1",
+            gsonConverter       : "com.squareup.retrofit2:converter-gson:2.4.0",
+            rxjavaAdapter       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            eventbus            : "org.greenrobot:eventbus:3.1.1",
+            logger              : "com.orhanobut:logger:2.1.1",
+            glide               : "com.github.bumptech.glide:glide:4.1.1",
+            glide_compiler      : "com.github.bumptech.glide:compiler:4.1.1",
+            butterknife         : "com.jakewharton:butterknife:10.1.0",
+            butterknife_compiler: "com.jakewharton:butterknife-compiler:10.1.0",
+            smartrefreshlayout  : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14",
+            arouter             : "com.alibaba:arouter-api:1.5.0",
+            arouter_compiler    : "com.alibaba:arouter-compiler:1.2.2",
 
     ]
 
@@ -43,7 +45,7 @@ ext {
             targetSdkVersion   : 28,
             versionCode        : 100,
             versionName        : "1.0.0",
-            applicationId      : "com.xiaodong.kotlindemos",
+            applicationId      : "com.xiaodong.androidkits",
             targetCompatibility: 1.8,
             sourceCompatibility: 1.8,
     ]

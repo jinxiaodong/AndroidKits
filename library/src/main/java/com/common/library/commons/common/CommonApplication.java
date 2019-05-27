@@ -9,6 +9,8 @@ import android.net.Network;
 import android.net.NetworkRequest;
 import android.os.Build;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.common.library.BuildConfig;
 import com.common.library.base.BaseApplication;
 import com.common.library.commons.event.NetWorkChangeEvent;
 import com.common.library.utils.NetUtils;
@@ -29,17 +31,21 @@ public class CommonApplication extends BaseApplication {
     }
 
     // TODO: 2019/05/06  初始化路由
-    public void  initRouter(){
+    public void initRouter() {
+        if (BuildConfig.DEBUG) {
+            ARouter.openLog();     // 打印日志
+            ARouter.openDebug();     // 打印日志
+        }
+        ARouter.init(this);
 
     }
 
     // TODO: 2019/05/06 初始化参数
-    public  void initConfig(){
+    public void initConfig() {
 
     }
 
     // TODO: 2019/05/06  初始化配置
-
 
 
     /*网络状态监听*/
@@ -73,12 +79,12 @@ public class CommonApplication extends BaseApplication {
                 e.printStackTrace();
             }
         } else {
-            BroadcastReceiver netWorkStateReceiver=new BroadcastReceiver(){
+            BroadcastReceiver netWorkStateReceiver = new BroadcastReceiver() {
 
                 @Override
                 public void onReceive(Context context, Intent intent) {
                     boolean netConnected = NetUtils.isNetConnected();
-                    EventBus.getDefault().post(new NetWorkChangeEvent(netConnected?NetWorkChangeEvent.NetWorkAvailable:NetWorkChangeEvent.NetWorkDisconnect));
+                    EventBus.getDefault().post(new NetWorkChangeEvent(netConnected ? NetWorkChangeEvent.NetWorkAvailable : NetWorkChangeEvent.NetWorkDisconnect));
                 }
             };
             IntentFilter filter = new IntentFilter();

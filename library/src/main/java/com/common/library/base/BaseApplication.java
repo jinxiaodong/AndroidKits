@@ -5,9 +5,9 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
-import com.common.library.commons.constants.DeviceInfo;
+import com.common.library.commons.device.DeviceInfo;
 import com.common.library.utils.LogUtil;
-import com.common.library.utils.Utils;
+import com.common.library.utils.LifecycleUtils;
 
 import androidx.multidex.MultiDexApplication;
 
@@ -31,8 +31,12 @@ public class BaseApplication extends MultiDexApplication {
         instance = this;
         context = getApplicationContext();
         appInit();
+        LifecycleUtils.init(this);
     }
 
+    /**
+     * 设备信息初始化
+     */
     private void appInit() {
         //屏幕信息\
         Resources resources = context.getResources();
@@ -50,6 +54,6 @@ public class BaseApplication extends MultiDexApplication {
             DeviceInfo.DENSITYDPI = displayMetrics.densityDpi;
             DeviceInfo.DENSITY = displayMetrics.density;
         }
-        Utils.init(this);
+
     }
 }

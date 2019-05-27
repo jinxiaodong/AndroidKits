@@ -25,7 +25,7 @@ public class ToastUtils {
             return ;
         }
         if (toast == null) {
-            toast = Toast.makeText(Utils.getApp().getApplicationContext(),msg, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(LifecycleUtils.getApp().getApplicationContext(),msg, Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER, 0, 0);
         } else {
             toast.setText(msg);
@@ -39,7 +39,7 @@ public class ToastUtils {
         if (TextUtils.isEmpty(msg))
             return;
         if (toast == null) {
-            toast = Toast.makeText(Utils.getApp().getApplicationContext(), msg, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(LifecycleUtils.getApp().getApplicationContext(), msg, Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER, 0, 0);
         } else {
             toast.setText(msg);
@@ -51,7 +51,7 @@ public class ToastUtils {
     }
 
     public static void show(int id) {
-        show(Utils.getApp().getString(id));
+        show(LifecycleUtils.getApp().getString(id));
     }
 
 

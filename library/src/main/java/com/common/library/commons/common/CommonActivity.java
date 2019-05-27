@@ -34,7 +34,6 @@ public abstract class CommonActivity<T extends BaseModel, E extends BasePresente
             mPresenter.setMV(mModel, this);
         }
         super.onCreate(savedInstanceState);
-        ButterKnife.inject(this);
         bActive = true;
     }
 
