@@ -28,6 +28,7 @@ public class CommonApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
         netWorkChangeListener();
+        initRouter();
     }
 
     // TODO: 2019/05/06  初始化路由

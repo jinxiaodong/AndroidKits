@@ -1,4 +1,4 @@
-package com.androidkits.camera.mediaselect;
+package com.androidkits.camera.mediaselect.config;
 
 import android.app.Activity;
 

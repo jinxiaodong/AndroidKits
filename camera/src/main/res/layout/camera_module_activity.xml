@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="debug.MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
+    <com.common.library.view.widgets.JButton
+        android:onClick="btnClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/dimen_20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/lib_white"
+        android:paddingRight="@dimen/dimen_20dp"
+        android:paddingBottom="10dp"
+        android:text="点我" />
 
 </RelativeLayout>

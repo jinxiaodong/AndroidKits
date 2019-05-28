@@ -9,7 +9,7 @@ public class Constants {
 
     }
 
-    public static class module2 {
-
+    public static class camera {
+        public static final String CONFIG_EXTRA = "config";
     }
 }

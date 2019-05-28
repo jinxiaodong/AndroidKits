@@ -3,12 +3,14 @@ package com.common.library.bean.camera;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
+
 import androidx.annotation.NonNull;
 
 /**
  * 图片实体类
  */
-public class MediaInfo implements Parcelable, Comparable<MediaInfo> {
+public class MediaInfo implements Parcelable, Serializable, Comparable<MediaInfo> {
 
     private String path;
     private String firstFramePath;
