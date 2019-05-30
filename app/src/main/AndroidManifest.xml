@@ -20,14 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name="com.androidkits.chapter1.SoftKeyBoardActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
-
-        <activity android:name="com.androidkits.chapter1.EditTextActivity" />
-        <activity android:name="com.androidkits.HomeLayoutActivity" />
+        <activity android:name="com.androidkits.chapter1.ClipboardActivity"></activity>
         <activity android:name="com.androidkits.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +28,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.androidkits.chapter1.SoftKeyBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="com.androidkits.chapter1.EditTextActivity" />
+        <activity android:name="com.androidkits.HomeLayoutActivity" />
         <activity android:name="com.androidkits.chapter1.WeiXinMenuActivity" />
         <activity android:name="com.androidkits.Chapter1Activity" />
         <activity android:name="com.androidkits.chapter1.SlidingDrawerActivity" />

@@ -57,6 +57,12 @@ public class DialogActivity extends CommonActivity {
         return super.onKeyDown(keyCode, event);
     }
 
+    @Override
+    public void onBackPressed() {
+        showCustomDialog();
+//        super.onBackPressed();
+    }
+
     private void showCustomDialog() {
         if (mCustomDialog == null) {
             mCustomDialog = new CustomDialog(this, "提示", "您确定退出应用吗？", "确定", "取消");

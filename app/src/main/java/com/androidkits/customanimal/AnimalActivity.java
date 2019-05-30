@@ -17,11 +17,11 @@ import java.util.List;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class AnimalActivity extends CommonActivity {
 
-    @InjectView(R.id.recycleview)
+    @BindView(R.id.recycleview)
     RecyclerView mRecycleview;
 
     private ListAdapter mListAdapter;

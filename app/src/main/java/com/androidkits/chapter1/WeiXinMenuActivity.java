@@ -17,16 +17,16 @@ import java.util.List;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class WeiXinMenuActivity extends CommonActivity {
 
 
-    @InjectView(R.id.status_bar)
+    @BindView(R.id.status_bar)
     View mStatusBar;
-    @InjectView(R.id.rl_title)
+    @BindView(R.id.rl_title)
     RelativeLayout mRlTitle;
-    @InjectView(R.id.btn_menu)
+    @BindView(R.id.btn_menu)
     LinearLayout mBtnMenu;
     private List<BeanWraper> mList = new ArrayList<>();
 

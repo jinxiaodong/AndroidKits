@@ -2,4 +2,11 @@
     <string name="app_name">camera</string>
     <string name="camera_album_selector_title">图片</string>
     <string name="camera_album_selector_preview">预览</string>
+
+    <string name="camera_confirm_with_count">确定(%d/%d)</string>
+    <string name="camera_confirm_count">确定(%d)</string>
+    <string name="camera_confirm">确定</string>
+    <string name="camera_previce_with_count">预览(%d)</string>
+    <string name="camera_preview">预览</string>
+    <string name="camera_photo_size">原图(%s)</string>
 </resources>

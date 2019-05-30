@@ -17,13 +17,16 @@ import java.util.List;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.InjectView;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class MainActivity extends CommonActivity {
 
 
-    @InjectView(R.id.recycleview)
-    RecyclerView mRecycleview;
+
+    @BindView(R.id.recycleview)
+    RecyclerView recycleview;
 
     private ListAdapter mListAdapter;
     private List<BeanWraper> mList = new ArrayList<>();
@@ -112,7 +115,14 @@ public class MainActivity extends CommonActivity {
     @Override
     protected void initData() {
         super.initData();
-        mRecycleview.setLayoutManager(new LinearLayoutManager(mContext));
-        mRecycleview.setAdapter(mListAdapter);
+        recycleview.setLayoutManager(new LinearLayoutManager(mContext));
+        recycleview.setAdapter(mListAdapter);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -67,6 +66,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     /*是否正在切换Fragment*/
     private boolean isSwitchFragmenting = false;
+    private LinearLayout content;
 
     /*用于在异步请求中更新ui*/
 //    private Handler mHandler;
@@ -93,19 +93,16 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         setContentView(R.layout.lib_base_activity_layout);
         mLayoutInflater = ((LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
         rootDecodeView = findViewById(R.id.rootDecodeView);
-        LinearLayout layout = findViewById(R.id.content);
+        content = findViewById(R.id.content);
         if (getHeaderLayoutId() == DEFAULT_HEADER) {
-            mHeaderView = mLayoutInflater.inflate(R.layout.lib_base_header, null);
+            mHeaderView = mLayoutInflater.inflate(R.layout.lib_base_header, content);
             mCommonHeaderView = mHeaderView.findViewById(R.id.common_header_view);
-            layout.addView(mHeaderView, LinearLayout.LayoutParams.MATCH_PARENT);
         } else if (getHeaderLayoutId() > CUSTOMER_HEADER) {
-            mHeaderView = mLayoutInflater.inflate(getHeaderLayoutId(), null);
-            layout.addView(mHeaderView, LinearLayout.LayoutParams.MATCH_PARENT);
+            mHeaderView = mLayoutInflater.inflate(getHeaderLayoutId(), content);
         }
 
         if (getContentLayoutId() > -1) {
-            mContentView = mLayoutInflater.inflate(getContentLayoutId(), null);
-            layout.addView(mContentView, LinearLayout.LayoutParams.MATCH_PARENT);
+            mContentView = mLayoutInflater.inflate(getContentLayoutId(), content);
         }
         if (isUseNetWorkListener()) {
             try {
@@ -200,7 +197,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
      * 将返回事件交给Back——EVENT
      */
     private void close() {
-        onKeyDown(KeyEvent.KEYCODE_BACK, null);
+        onBackPressed();
     }
 
     /**

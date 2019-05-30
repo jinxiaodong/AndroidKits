@@ -10,6 +10,9 @@ import java.util.ArrayList;
  * description：照片选择器配置类
  */
 public class ImageSelectorConfig implements Serializable {
+    public static final int RESULT_CODE = 0x00000012;
+    public static final String IS_CONFIRM = "is_confirm";
+
 
     //最大的图片选择数
     public int mMaxCount;

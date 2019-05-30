@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
  * Created by jiangdylan on 2017/10/22.
  */
 
-public class AppHelper {
+public class ApplicationHelper {
     public static Application getApplication() {
         try {
             Class<?> clazz = Class.forName("android.app.ActivityThread");

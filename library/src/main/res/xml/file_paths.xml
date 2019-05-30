@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--可以共享给其他应用的文件目录-->
+
+    <!--//代表内部存储空间应用私有目录下的 files/ 目录，等同于 Context.getFilesDir() 所获取的目录路径 ；/data/user/0/包名/files-->
+    <files-path name="files_path" path="pictures/" />
+    <!--//代表内部存储空间应用私有目录下的 cache/ 目录，等同于 Context.getCacheDir() 所获取的目录路径；/data/user/0/包名/cache-->
+    <cache-path name="cache_path" path="pictures/" />
+
+    <!--//代表外部存储空间根目录，等同于 Environment.getExternalStorageDirectory() 所获取的目录路径；/storage/emulated/0-->
+    <external-path name="external_path" path="Android/data/com.xiaodong.androidkits/cache/" />
+    <external-path name="external_path" path="Android/data/com.xiaodong.androidkits/files/" />
+
+    <!--//代表外部存储空间应用私有目录下的 files/ 目录，等同于 Context.getExternalFilesDir(null) 所获取的目录路径；/storage/emulated/0/Android/data/包名/files-->
+    <external-files-path name="external_files" path="pictures/" />
+
+    <!--//代表外部存储空间应用私有目录下的 cache/ 目录，等同于 Context.getExternalCacheDir()； /storage/emulated/0/Android/data/包名/cache-->
+    <external-cache-path name="external_cache" path="pictures/" />
+    <!--//代表外部媒体区域根目录中的文件。等同于Context.getExternalMediaDirs()。-->
+    <!--<external-media-path-->
+        <!--name="external_media"-->
+        <!--path="media/" />-->
+
+
+    <root-path
+        name="name"
+        path="" />
+    <root-path
+        name="Name"
+        path="." />
+    <external-files-path
+        name="Files"
+        path="." />
+    <external-path
+        name="Others"
+        path="." />
+    <files-path
+        name="Files"
+        path="." />
+
+</paths>

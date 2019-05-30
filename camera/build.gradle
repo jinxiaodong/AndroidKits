@@ -9,7 +9,6 @@ android {
     buildToolsVersion app.buildToolsVersion
     defaultConfig {
         multiDexEnabled true
-
         minSdkVersion app.minSdkVersion
         targetSdkVersion app.targetSdkVersion
         versionCode app.versionCode

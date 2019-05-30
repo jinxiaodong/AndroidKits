@@ -6,7 +6,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.util.DisplayMetrics;
 
-import com.common.library.helper.AppHelper;
+import com.common.library.helper.ApplicationHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,7 +21,7 @@ public class DeviceUtil {
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */
     public static int dp2px(float dp){
-        final float scale = AppHelper.getApplication().getResources().getDisplayMetrics().density;
+        final float scale = ApplicationHelper.getApplication().getResources().getDisplayMetrics().density;
         return (int) (dp * scale + 0.5f);
     }
 
@@ -30,7 +30,7 @@ public class DeviceUtil {
      * 根据手机的分辨率从 px(像素) 的单位 转成为 dp
      */
     public static int px2dp(float px) {
-        final float scale = AppHelper.getApplication().getResources().getDisplayMetrics().density;
+        final float scale = ApplicationHelper.getApplication().getResources().getDisplayMetrics().density;
         return (int) (px / scale + 0.5f);
     }
     /**
@@ -62,7 +62,7 @@ public class DeviceUtil {
      * @return
      */
     public static String getResString(int id){
-        return AppHelper.getApplication().getResources().getString(id);
+        return ApplicationHelper.getApplication().getResources().getString(id);
     }
 
     /**

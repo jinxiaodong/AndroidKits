@@ -9,7 +9,7 @@ import com.common.androidexample200.R;
 import com.common.library.commons.common.CommonActivity;
 import com.common.library.utils.SystemBarUtil;
 
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * Created by xiaodong.jin on 2018/7/17.
@@ -18,7 +18,7 @@ import butterknife.InjectView;
 public class RotateMenuActivity extends CommonActivity {
 
 
-    @InjectView(R.id.satellitemMenu)
+    @BindView(R.id.satellitemMenu)
     SatelliteMenu mSatellitemMenu;
 
     @Override

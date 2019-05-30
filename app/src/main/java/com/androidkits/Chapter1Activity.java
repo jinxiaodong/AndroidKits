@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.androidkits.chapter1.AcceptShareActivity;
+import com.androidkits.chapter1.ClipboardActivity;
 import com.androidkits.chapter1.DialogActivity;
 import com.androidkits.chapter1.EditTextActivity;
 import com.androidkits.chapter1.GeeTestActivity;
@@ -27,12 +28,12 @@ import java.util.List;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class Chapter1Activity extends CommonActivity {
 
 
-    @InjectView(R.id.recycleview)
+    @BindView(R.id.recycleview)
     RecyclerView mRecycleview;
 
     private ListAdapter mListAdapter;
@@ -64,6 +65,7 @@ public class Chapter1Activity extends CommonActivity {
         mList.add(FormatDataUtils.getBeanWraper("提示Dialog"));
         mList.add(FormatDataUtils.getBeanWraper("EditText"));
         mList.add(FormatDataUtils.getBeanWraper("软键盘弹出监听"));
+        mList.add(FormatDataUtils.getBeanWraper("剪切板"));
 
     }
 
@@ -119,6 +121,9 @@ public class Chapter1Activity extends CommonActivity {
                         intent = new Intent(Chapter1Activity.this, EditTextActivity.class);
                     case "软键盘弹出监听":
                         intent = new Intent(Chapter1Activity.this, SoftKeyBoardActivity.class);
+                        break;
+                    case "剪切板":
+                        intent = new Intent(Chapter1Activity.this, ClipboardActivity.class);
                         break;
                 }
                 if (intent == null) {
