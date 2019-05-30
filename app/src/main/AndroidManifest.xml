@@ -1,63 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.common.androidexample200">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    package="com.example.app">
 
     <application
-        android:name="com.androidkits.JApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.androidkits.chapter1.ClipboardActivity"></activity>
-        <activity android:name="com.androidkits.MainActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.androidkits.chapter1.SoftKeyBoardActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
-        <activity android:name="com.androidkits.chapter1.EditTextActivity" />
-        <activity android:name="com.androidkits.HomeLayoutActivity" />
-        <activity android:name="com.androidkits.chapter1.WeiXinMenuActivity" />
-        <activity android:name="com.androidkits.Chapter1Activity" />
-        <activity android:name="com.androidkits.chapter1.SlidingDrawerActivity" />
-        <activity android:name="com.androidkits.chapter1.QQSlideMenuActivity" />
-        <activity android:name="com.androidkits.chapter1.VerticalViewpagerActivity" />
-        <activity android:name="com.androidkits.chapter1.VerticalViewpagerCalanderActivity" />
-        <activity android:name="com.androidkits.chapter1.GeeTestActivity" />
-        <activity android:name="com.androidkits.chapter1.AcceptShareActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <!-- 指定分享类型,我这边只能分享video/mp4,image/* text/*, -->
-                <data android:mimeType="video/mp4" />
-                <data android:mimeType="image/*" />
-                <data android:mimeType="text/*" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.androidkits.chapter1.RotateMenuActivity" />
-        <activity android:name="com.androidkits.customanimal.CustomAnimalActivity" />
-        <activity android:name="com.androidkits.customanimal.AnimalActivity" />
-        <activity android:name="com.androidkits.customanimal.animal.InterpolatorActivity" />
-        <activity android:name="com.androidkits.chapter1.DialogActivity" />
     </application>
 
 </manifest>

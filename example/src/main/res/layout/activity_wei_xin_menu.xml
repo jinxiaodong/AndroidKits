@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_main_white"
+    android:orientation="vertical"
+    tools:context="com.androidkits.example.chapter1.WeiXinMenuActivity">
+
+    <View
+        android:background="@color/lib_main_color"
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></View>
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:background="@color/lib_main_color"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp">
+        <!--微信标题-->
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wx_text_title"
+            android:textColor="@color/lib_main_white"
+            android:textSize="18sp"
+            />
+        <!--菜单按钮-->
+  <LinearLayout
+      android:id="@+id/btn_menu"
+      android:gravity="center"
+      android:layout_gravity="right"
+      android:layout_alignParentRight="true"
+      android:layout_width="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_height="match_parent">
+      <Button
+          android:layout_width="28dp"
+          android:layout_height="28dp"
+          android:background="@mipmap/btn_add"
+          android:onClick="OnMenu"/>
+  </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

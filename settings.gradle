@@ -1,4 +1,4 @@
-include ':app', ':camera',
+include ':example', ':camera', ':app',
 //        ':middlelib',
 //        ':framework',
         ':library'
