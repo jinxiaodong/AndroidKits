@@ -20,8 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.androidkits.example.chapter1.ClipboardActivity"></activity>
-        <activity android:name="com.androidkits.example.ExampleActivity">
+        <activity android:name=".chapter1.AnimalActivity2"></activity>
+        <activity android:name=".chapter1.ClipboardActivity" />
+        <activity android:name=".ExampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,20 +30,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.androidkits.example.chapter1.SoftKeyBoardActivity"
+            android:name=".chapter1.SoftKeyBoardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-        <activity android:name="com.androidkits.example.chapter1.EditTextActivity" />
-        <activity android:name="com.androidkits.example.HomeLayoutActivity" />
-        <activity android:name="com.androidkits.example.chapter1.WeiXinMenuActivity" />
-        <activity android:name="com.androidkits.example.Chapter1Activity" />
-        <activity android:name="com.androidkits.example.chapter1.SlidingDrawerActivity" />
-        <activity android:name="com.androidkits.example.chapter1.QQSlideMenuActivity" />
-        <activity android:name="com.androidkits.example.chapter1.VerticalViewpagerActivity" />
-        <activity android:name="com.androidkits.example.chapter1.VerticalViewpagerCalanderActivity" />
-        <activity android:name="com.androidkits.example.chapter1.GeeTestActivity" />
-        <activity android:name="com.androidkits.example.chapter1.AcceptShareActivity">
+        <activity android:name=".chapter1.EditTextActivity" />
+        <activity android:name=".HomeLayoutActivity" />
+        <activity android:name=".chapter1.WeiXinMenuActivity" />
+        <activity android:name=".Chapter1Activity" />
+        <activity android:name=".chapter1.SlidingDrawerActivity" />
+        <activity android:name=".chapter1.QQSlideMenuActivity" />
+        <activity android:name=".chapter1.VerticalViewpagerActivity" />
+        <activity android:name=".chapter1.VerticalViewpagerCalanderActivity" />
+        <activity android:name=".chapter1.GeeTestActivity" />
+        <activity android:name=".chapter1.AcceptShareActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -53,11 +54,11 @@
                 <data android:mimeType="text/*" />
             </intent-filter>
         </activity>
-        <activity android:name="com.androidkits.example.chapter1.RotateMenuActivity" />
-        <activity android:name="com.androidkits.example.customanimal.CustomAnimalActivity" />
-        <activity android:name="com.androidkits.example.customanimal.AnimalActivity" />
-        <activity android:name="com.androidkits.example.customanimal.animal.InterpolatorActivity" />
-        <activity android:name="com.androidkits.example.chapter1.DialogActivity" />
+        <activity android:name=".chapter1.RotateMenuActivity" />
+        <activity android:name=".customanimal.CustomAnimalActivity" />
+        <activity android:name=".customanimal.AnimalActivity" />
+        <activity android:name=".customanimal.animal.InterpolatorActivity" />
+        <activity android:name=".chapter1.DialogActivity" />
     </application>
 
 </manifest>

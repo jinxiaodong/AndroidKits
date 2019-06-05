@@ -62,5 +62,3 @@ dependencies {
     annotationProcessor thirdDependencies.arouter_compiler
     annotationProcessor thirdDependencies.butterknife_compiler
 }
-
-

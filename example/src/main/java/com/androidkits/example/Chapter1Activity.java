@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.androidkits.example.chapter1.AcceptShareActivity;
+import com.androidkits.example.chapter1.AnimalActivity2;
 import com.androidkits.example.chapter1.ClipboardActivity;
 import com.androidkits.example.chapter1.DialogActivity;
 import com.androidkits.example.chapter1.EditTextActivity;
@@ -65,6 +66,7 @@ public class Chapter1Activity extends CommonActivity {
         mList.add(FormatDataUtils.getBeanWraper("EditText"));
         mList.add(FormatDataUtils.getBeanWraper("软键盘弹出监听"));
         mList.add(FormatDataUtils.getBeanWraper("剪切板"));
+        mList.add(FormatDataUtils.getBeanWraper("Test"));
 
     }
 
@@ -123,6 +125,9 @@ public class Chapter1Activity extends CommonActivity {
                         break;
                     case "剪切板":
                         intent = new Intent(Chapter1Activity.this, ClipboardActivity.class);
+                        break;
+                    case "Test":
+                        intent = new Intent(Chapter1Activity.this, AnimalActivity2.class);
                         break;
                 }
                 if (intent == null) {
