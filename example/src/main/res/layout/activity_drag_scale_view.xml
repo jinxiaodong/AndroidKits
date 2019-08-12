@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter1.DragScaleViewActivity">
+
+
+    <!--<com.androidkits.example.view.DragScaleView-->
+    <!--android:id="@+id/hair_dv"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:adjustViewBounds="true"-->
+    <!--android:background="@drawable/ic_launcher_background"-->
+    <!--android:clickable="true"-->
+    <!--android:src="@drawable/ic_launcher_foreground" />-->
+
+    <LinearLayout
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:layout_centerInParent="true">
+
+        <com.androidkits.example.view.DragIconView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </LinearLayout>
+</RelativeLayout>

@@ -6,8 +6,10 @@ import android.view.View;
 
 import com.androidkits.example.chapter1.AcceptShareActivity;
 import com.androidkits.example.chapter1.AnimalActivity2;
+import com.androidkits.example.chapter1.ClickSpanActivity;
 import com.androidkits.example.chapter1.ClipboardActivity;
 import com.androidkits.example.chapter1.DialogActivity;
+import com.androidkits.example.chapter1.DragScaleViewActivity;
 import com.androidkits.example.chapter1.EditTextActivity;
 import com.androidkits.example.chapter1.GeeTestActivity;
 import com.androidkits.example.chapter1.QQSlideMenuActivity;
@@ -66,7 +68,9 @@ public class Chapter1Activity extends CommonActivity {
         mList.add(FormatDataUtils.getBeanWraper("EditText"));
         mList.add(FormatDataUtils.getBeanWraper("软键盘弹出监听"));
         mList.add(FormatDataUtils.getBeanWraper("剪切板"));
-        mList.add(FormatDataUtils.getBeanWraper("Test"));
+        mList.add(FormatDataUtils.getBeanWraper("Animation2"));
+        mList.add(FormatDataUtils.getBeanWraper("ClickSpan"));
+        mList.add(FormatDataUtils.getBeanWraper("DragScaleView"));
 
     }
 
@@ -126,8 +130,14 @@ public class Chapter1Activity extends CommonActivity {
                     case "剪切板":
                         intent = new Intent(Chapter1Activity.this, ClipboardActivity.class);
                         break;
-                    case "Test":
+                    case "Animation2":
                         intent = new Intent(Chapter1Activity.this, AnimalActivity2.class);
+                        break;
+                    case "ClickSpan":
+                        intent = new Intent(Chapter1Activity.this, ClickSpanActivity.class);
+                        break;
+                    case "DragScaleView":
+                        intent = new Intent(Chapter1Activity.this, DragScaleViewActivity.class);
                         break;
                 }
                 if (intent == null) {
