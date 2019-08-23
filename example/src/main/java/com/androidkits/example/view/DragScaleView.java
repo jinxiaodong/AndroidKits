@@ -4,12 +4,11 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
-import com.androidkits.example.R;
 
 import androidx.appcompat.widget.AppCompatImageView;
 
@@ -39,6 +38,7 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
 
     // 初始的两个手指按下的触摸点的距离
     private float oriDis = 1f;
+    private float oriRotation = 0;
 
     /**
      * 初始化获取屏幕宽高
@@ -76,8 +76,7 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        setBackgroundResource(R.drawable.rect_gap_sign_location);
-        int action = event.getAction()& MotionEvent.ACTION_MASK;
+        int action = event.getAction() & MotionEvent.ACTION_MASK;
         if (action == MotionEvent.ACTION_DOWN) {
             oriLeft = v.getLeft();
             oriRight = v.getRight();
@@ -85,19 +84,20 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
             oriBottom = v.getBottom();
             lastY = (int) event.getRawY();
             lastX = (int) event.getRawX();
+            oriRotation = v.getRotation();
             dragDirection = getDirection(v, (int) event.getX(),
                     (int) event.getY());
         }
-        if (action == MotionEvent.ACTION_POINTER_DOWN){
-            oriLeft = v.getLeft();
-            oriRight = v.getRight();
-            oriTop = v.getTop();
-            oriBottom = v.getBottom();
-            lastY = (int) event.getRawY();
-            lastX = (int) event.getRawX();
-            dragDirection = TOUCH_TWO;
-            oriDis = distance(event);
-        }
+//        if (action == MotionEvent.ACTION_POINTER_DOWN){
+//            oriLeft = v.getLeft();
+//            oriRight = v.getRight();
+//            oriTop = v.getTop();
+//            oriBottom = v.getBottom();
+//            lastY = (int) event.getRawY();
+//            lastX = (int) event.getRawX();
+//            dragDirection = TOUCH_TWO;
+//            oriDis = distance(event);
+//        }
         // 处理拖动事件
         delDrag(v, event, action);
         invalidate();
@@ -117,55 +117,68 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
                 int dx = (int) event.getRawX() - lastX;
                 int dy = (int) event.getRawY() - lastY;
                 switch (dragDirection) {
-                    case LEFT: // 左边缘
-                        left(v, dx);
-                        break;
-                    case RIGHT: // 右边缘
-                        right(v, dx);
-                        break;
-                    case BOTTOM: // 下边缘
-                        bottom(v, dy);
-                        break;
-                    case TOP: // 上边缘
-                        top(v, dy);
-                        break;
+//                    case LEFT: // 左边缘
+//                        left(v, dx);
+//                        break;
+//                    case RIGHT: // 右边缘
+//                        right(v, dx);
+//                        break;
+//                    case BOTTOM: // 下边缘
+//                        bottom(v, dy);
+//                        break;
+//                    case TOP: // 上边缘
+//                        top(v, dy);
+//                        break;
                     case CENTER: // 点击中心-->>移动
                         center(v, dx, dy);
                         break;
-                    case LEFT_BOTTOM: // 左下
-                        left(v, dx);
-                        bottom(v, dy);
-                        break;
-                    case LEFT_TOP: // 左上
-                        left(v, dx);
-                        top(v, dy);
-                        break;
+//                    case LEFT_BOTTOM: // 左下
+//                        left(v, dx);
+//                        bottom(v, dy);
+//                        break;
+//                    case LEFT_TOP: // 左上
+//                        left(v, dx);
+//                        top(v, dy);
+//                        break;
                     case RIGHT_BOTTOM: // 右下
-                        right(v, dx);
-                        bottom(v, dy);
-                        break;
-                    case RIGHT_TOP: // 右上
-                        right(v, dx);
-                        top(v, dy);
-                        break;
-                    case TOUCH_TWO: //双指操控
-                        float newDist =distance(event);
-                        float scale = newDist / oriDis;
-                        //控制双指缩放的敏感度
-                        int distX = (int) (scale*(oriRight-oriLeft)-(oriRight-oriLeft))/50;
-                        int distY = (int) (scale*(oriBottom-oriTop)-(oriBottom-oriTop))/50;
-                        if (newDist>10f){//当双指的距离大于10时，开始相应处理
-                            left(v, -distX);
-                            top(v, -distY);
-                            right(v, distX);
-                            bottom(v, distY);
+
+                        if ((dx > 0 && dy > 0) || (dx < 0 && dy < 0)) {
+                            //左上、右下滑动
+                            right(v, dx);
+                            bottom(v, dy);
+                            if (dragDirection != CENTER) {
+                                v.layout(oriLeft, oriTop, oriRight, oriBottom);
+                            }
+                        } else {
+                            Point center = new Point(oriLeft + (oriRight - oriLeft) / 2, oriTop + (oriBottom - oriTop) / 2);
+                            Point first = new Point(lastX, lastY);
+                            Point second = new Point((int) event.getRawX(), (int) event.getRawY());
+                            oriRotation += angle(center, first, second);
+
+                            v.setRotation(oriRotation);
                         }
+
                         break;
+//                    case RIGHT_TOP: // 右上
+//                        right(v, dx);
+//                        top(v, dy);
+//                        break;
+//                    case TOUCH_TWO: //双指操控
+//                        float newDist =distance(event);
+//                        float scale = newDist / oriDis;
+//                        //控制双指缩放的敏感度
+//                        int distX = (int) (scale*(oriRight-oriLeft)-(oriRight-oriLeft))/50;
+//                        int distY = (int) (scale*(oriBottom-oriTop)-(oriBottom-oriTop))/50;
+//                        if (newDist>10f){//当双指的距离大于10时，开始相应处理
+//                            left(v, -distX);
+//                            top(v, -distY);
+//                            right(v, distX);
+//                            bottom(v, distY);
+//                        }
+//                        break;
 
                 }
-                if (dragDirection != CENTER) {
-                    v.layout(oriLeft, oriTop, oriRight, oriBottom);
-                }
+
                 lastX = (int) event.getRawX();
                 lastY = (int) event.getRawY();
                 break;
@@ -175,6 +188,42 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
                 break;
         }
     }
+
+
+    public float angle(Point cen, Point first, Point second) {
+        float dx1, dx2, dy1, dy2;
+
+        dx1 = first.x - cen.x;
+        dy1 = first.y - cen.y;
+        dx2 = second.x - cen.x;
+        dy2 = second.y - cen.y;
+
+        // 计算三边的平方
+        float ab2 = (second.x - first.x) * (second.x - first.x) + (second.y - first.y) * (second.y - first.y);
+        float oa2 = dx1 * dx1 + dy1 * dy1;
+        float ob2 = dx2 * dx2 + dy2 * dy2;
+
+        // 根据两向量的叉乘来判断顺逆时针
+        boolean isClockwise = ((first.x - cen.x) * (second.y - cen.y) - (first.y - cen.y) * (second.x - cen.x)) > 0;
+
+        // 根据余弦定理计算旋转角的余弦值
+        double cosDegree = (oa2 + ob2 - ab2) / (2 * Math.sqrt(oa2) * Math.sqrt(ob2));
+
+        // 异常处理，因为算出来会有误差绝对值可能会超过一，所以需要处理一下
+        if (cosDegree > 1) {
+            cosDegree = 1;
+        } else if (cosDegree < -1) {
+            cosDegree = -1;
+        }
+
+        // 计算弧度
+        double radian = Math.acos(cosDegree);
+
+        // 计算旋转过的角度，顺时针为正，逆时针为负
+        return (float) (isClockwise ? Math.toDegrees(radian) : -Math.toDegrees(radian));
+
+    }
+
 
     /**
      * 触摸点为中心->>移动
@@ -204,7 +253,7 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
             bottom = screenHeight + offset;
             top = bottom - v.getHeight();
         }
-        Log.d("raydrag", left+"  "+top+"  "+right+"  "+bottom+"  "+dx);
+        Log.d("raydrag", left + "  " + top + "  " + right + "  " + bottom + "  " + dx);
         v.layout(left, top, right, bottom);
     }
 
@@ -324,4 +373,31 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
         float y = event.getY(0) - event.getY(1);
         return (float) Math.sqrt(x * x + y * y);//两点间距离公式
     }
+
+
+    /**
+     * 检查属于哪个象限
+     * <p>
+     * 0+++++++1
+     * +       +
+     * +       +
+     * +       +
+     * +       +
+     * 3+++++++4
+     *
+     * @return
+     */
+    private int checkDragPoint(int[] point) {
+//        oriLeft;
+//        oriRight = v.getRight();
+//        oriTop = v.getTop();
+//        oriBottom = v.getBottom();
+
+        int y = (oriBottom - oriTop) / 2;
+        int x = (oriRight - oriLeft) / 2;
+
+
+        return -1;
+    }
+
 }

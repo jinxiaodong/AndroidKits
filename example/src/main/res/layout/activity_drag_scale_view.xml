@@ -7,25 +7,36 @@
     tools:context=".chapter1.DragScaleViewActivity">
 
 
-    <!--<com.androidkits.example.view.DragScaleView-->
-    <!--android:id="@+id/hair_dv"-->
-    <!--android:layout_width="100dp"-->
-    <!--android:layout_height="120dp"-->
-    <!--android:layout_marginLeft="50dp"-->
-    <!--android:layout_marginTop="10dp"-->
-    <!--android:adjustViewBounds="true"-->
-    <!--android:background="@drawable/ic_launcher_background"-->
-    <!--android:clickable="true"-->
-    <!--android:src="@drawable/ic_launcher_foreground" />-->
+<!--    <com.androidkits.example.view.DragScaleView-->
+<!--    android:id="@+id/hair_dv"-->
+<!--    android:layout_width="100dp"-->
+<!--    android:layout_height="120dp"-->
+<!--    android:layout_marginLeft="50dp"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:adjustViewBounds="true"-->
+<!--    android:background="@drawable/ic_launcher_background"-->
+<!--    android:clickable="true"-->
+<!--     />-->
 
-    <LinearLayout
-        android:layout_width="@dimen/dimen_20dp"
-        android:layout_height="@dimen/dimen_20dp"
-        android:layout_centerInParent="true">
+    <com.androidkits.example.view.DragScaleView
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:clickable="true"
+       />
 
-        <com.androidkits.example.view.DragIconView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="@dimen/dimen_20dp"-->
+<!--        android:layout_height="@dimen/dimen_20dp"-->
+<!--        android:layout_centerInParent="true">-->
+
+<!--        <com.androidkits.example.view.DragIconView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true" />-->
+<!--    </LinearLayout>-->
 </RelativeLayout>

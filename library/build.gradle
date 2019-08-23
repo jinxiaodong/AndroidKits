@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.mob.sdk'
-apply from: '../MobSDK.gradle'
+//apply plugin: 'com.mob.sdk'
+//apply from: '../MobSDK.gradle'
 android {
     compileSdkVersion app.compileSdkVersion
     buildToolsVersion app.buildToolsVersion
@@ -25,6 +25,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 
     compileOptions {
         sourceCompatibility app.sourceCompatibility
@@ -33,8 +38,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     api supportDependencies.cardview
     api supportDependencies.supportv4
     api supportDependencies.appCompat

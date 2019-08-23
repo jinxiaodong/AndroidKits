@@ -63,11 +63,7 @@ android {
             outputFileName = "${debugType}_${versionName}_${date}_${applicationId}.apk"
         }
     }
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
+
 }
 
 dependencies {
