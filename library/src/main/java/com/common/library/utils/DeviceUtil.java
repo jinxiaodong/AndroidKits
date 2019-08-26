@@ -17,6 +17,12 @@ import java.util.Date;
  */
 
 public class DeviceUtil {
+
+    /** 屏幕宽度   */
+    private static int DisplayWidthPixels = 0;
+    /** 屏幕高度   */
+    private static int DisplayheightPixels = 0;
+
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */
@@ -56,6 +62,44 @@ public class DeviceUtil {
     }
 
 
+    /**
+     * 获取屏幕宽度
+     * @param context
+     * @return
+     */
+    public static int getDisplayWidthPixels(Context context) {
+        if (context == null) {
+            return -1;
+        }
+        if (DisplayWidthPixels == 0) {
+            getDisplayMetrics(context);
+        }
+        return DisplayWidthPixels;
+    }
+    /**
+     * 获取屏幕参数
+     * @param context
+     */
+    private static void getDisplayMetrics(Context context) {
+        DisplayMetrics dm = new DisplayMetrics();
+        ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(dm);
+        DisplayWidthPixels = dm.widthPixels;// 宽度
+        DisplayheightPixels = dm.heightPixels;// 高度
+    }
+    /**
+     * 获取屏幕高度
+     * @param context
+     * @return
+     */
+    public static int getDisplayheightPixels(Context context) {
+        if (context == null) {
+            return -1;
+        }
+        if (DisplayheightPixels == 0) {
+            getDisplayMetrics(context);
+        }
+        return DisplayheightPixels;
+    }
     /**
      * 获取字符串
      * @param id 字符串id
