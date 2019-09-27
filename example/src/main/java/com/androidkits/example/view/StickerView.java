@@ -31,7 +31,7 @@ public class StickerView extends View {
 
     private Bitmap mBitmap;
     private Bitmap mControllerBitmap, mDeleteBitmap;
-    //	private Bitmap mReversalHorBitmap, mReversalVerBitmap;// Ë®Æ½·´×ªºÍ´¹Ö±·´×ªbitmap
+    //	private Bitmap mReversalHorBitmap, mReversalVerBitmap;// æ°´å¹³åè½¬å’Œå‚ç›´åè½¬bitmap
     private Matrix mMatrix;
     private Paint mPaint, mBorderPaint;
     private float mControllerWidth, mControllerHeight, mDeleteWidth,
@@ -213,7 +213,7 @@ public class StickerView extends View {
 
     }
 
-//	// ÅĞ¶Ïµã»÷ÇøÓòÊÇ·ñÔÚË®Æ½·´×ª°´Å¥ÇøÓòÄÚ
+//	// åˆ¤æ–­ç‚¹å‡»åŒºåŸŸæ˜¯å¦åœ¨æ°´å¹³åè½¬æŒ‰é’®åŒºåŸŸå†…
 //	private boolean isInReversalHorizontal(float x, float y) {
 //		int position = 2;
 //		float rx = mPoints[position];
@@ -229,7 +229,7 @@ public class StickerView extends View {
 //
 //	}
 //
-//	// ÅĞ¶Ïµã»÷ÇøÓòÊÇ·ñÔÚ´¹Ö±·´×ª°´Å¥ÇøÓòÄÚ
+//	// åˆ¤æ–­ç‚¹å‡»åŒºåŸŸæ˜¯å¦åœ¨å‚ç›´åè½¬æŒ‰é’®åŒºåŸŸå†…
 //	private boolean isInReversalVertical(float x, float y) {
 //		int position = 6;
 //		float rx = mPoints[position];
@@ -329,7 +329,7 @@ public class StickerView extends View {
 
                 }
 
-                if (mInMove == true) { // ÍÏ¶¯µÄ²Ù×÷
+                if (mInMove == true) { // æ‹–åŠ¨çš„æ“ä½œ
                     float cX = x - mLastPointX;
                     float cY = y - mLastPointY;
                     mInController = false;
@@ -359,7 +359,7 @@ public class StickerView extends View {
         }
     }
 
-    // Í¼Æ¬Ë®Æ½·´×ª
+    // å›¾ç‰‡æ°´å¹³åè½¬
     private void doReversalHorizontal() {
         float[] floats = new float[]{-1f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 1f};
         Matrix tmpMatrix = new Matrix();
@@ -370,7 +370,7 @@ public class StickerView extends View {
         mInReversalHorizontal = false;
     }
 
-    // Í¼Æ¬´¹Ö±·´×ª
+    // å›¾ç‰‡å‚ç›´åè½¬
     private void doReversalVertical() {
         float[] floats = new float[]{1f, 0f, 0f, 0f, -1f, 0f, 0f, 0f, 1f};
         Matrix tmpMatrix = new Matrix();

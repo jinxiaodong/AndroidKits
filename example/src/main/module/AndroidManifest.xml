@@ -20,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".chapter1.DragScaleViewActivity"></activity>
+        <activity android:name=".chapter2.StartSelfActivity"></activity>
+        <activity android:name=".chapter2.Chapter2Activity" />
+        <activity android:name=".chapter1.DragScaleViewActivity" />
         <activity android:name=".chapter1.ClickSpanActivity" />
         <activity android:name=".chapter1.AnimalActivity2" />
         <activity android:name=".chapter1.ClipboardActivity" />

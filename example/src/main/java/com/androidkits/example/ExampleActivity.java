@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.androidkits.example.chapter2.Chapter2Activity;
 import com.androidkits.example.customanimal.CustomAnimalActivity;
 import com.androidkits.example.utils.FormatDataUtils;
 import com.common.library.base.adapter.ListAdapter;
@@ -79,6 +80,7 @@ public class ExampleActivity extends CommonActivity {
                         intent = new Intent(ExampleActivity.this, Chapter1Activity.class);
                         break;
                     case "chapter2":
+                        intent = new Intent(ExampleActivity.this, Chapter2Activity.class);
 
                         break;
                     case "chapter3":

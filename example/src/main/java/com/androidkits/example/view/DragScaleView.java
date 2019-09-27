@@ -145,8 +145,8 @@ public class DragScaleView extends AppCompatImageView implements View.OnTouchLis
 
                         if ((dx > 0 && dy > 0) || (dx < 0 && dy < 0)) {
                             //左上、右下滑动
-                            right(v, dx);
-                            bottom(v, dy);
+//                            right(v, dx);
+//                            bottom(v, dy);
                             if (dragDirection != CENTER) {
                                 v.layout(oriLeft, oriTop, oriRight, oriBottom);
                             }
