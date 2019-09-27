@@ -26,6 +26,8 @@ public class StartSelfActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
 
+
+
     }
 
     @Override
